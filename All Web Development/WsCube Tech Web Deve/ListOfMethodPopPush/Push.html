@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main"></h1>
+    <button onclick="push()">PUSH</button>
+    <button onclick="pop()">POP</button>
+</body>
+<script>
+    var fruits = ["Mango","Apple","Pineapple","Banana"];
+    document.getElementById("main").innerHTML = fruits;
+    function push(){
+        var x = prompt("Please Enter Fruit Name..","");
+        fruits.push(x);
+        document.getElementById("main").innerHTML = fruits;
+    }
+    function pop(){
+        fruits.pop();
+        document.getElementById("main").innerHTML = fruits;
+    }
+</script>
+</html>

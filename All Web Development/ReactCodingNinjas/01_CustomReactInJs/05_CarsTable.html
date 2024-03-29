@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Table</title>
+    <style>
+        table{
+            border: 2px double brown;
+            border-radius: 10px;
+            border-collapse: collapse;
+        }
+
+        th{
+            border: 0px;
+            border-bottom: 1px;
+            border-right: 1px;
+            border-style: solid;
+            background-color: aliceblue;
+        }
+
+        td{
+            border: 0px;
+            border-bottom: 1px;
+            border-right: 1px;
+            border-style: solid;
+        }
+
+        h1{
+            color: blue;
+        }
+
+        img{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    function App(){
+        let cars = [
+            {
+                name: "Tata",
+                price: "26Lakh",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U109S_Xta39u9bJo_Ozjpv64UnbBVh6B1w&usqp=CAU"
+            },
+            {
+                name: "Mahindra",
+                price: "22Lakh",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U109S_Xta39u9bJo_Ozjpv64UnbBVh6B1w&usqp=CAU"
+            },
+            {
+                name: "Honda",
+                price: "18Lakh",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U109S_Xta39u9bJo_Ozjpv64UnbBVh6B1w&usqp=CAU"
+
+            },
+        ];
+
+        return(
+            <>
+                <h1>Cars Details</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Average</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {
+                            cars.map((car,index)=>(
+                                <tr key={index}>
+                                    <td><img src={car.img} alt="img"/></td>
+                                    <td>{car.name}</td>
+                                    <td>{car.price}</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </>
+        );
+    };
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+
+
+<!-- React CDN Link -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- BABEL CDN Link -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</html>

@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container{
+    width: 60%;
+    height: 70%;
+    border: 2px solid black;
+    /* background-image: linear-gradient(to right, red,blue); */
+    background-image: linear-gradient(to right top, #d16ba5, #ee7790, #fc8b7d, #fca66f, #f2c26d, #e5d06e, #d3dd75, #beea84, #a9ec86, #8fef8a, #6ff092, #3df29d);
+    display: flex;
+
+    /* flex-direction: column; */
+
+    /* justify-content: center; */
+    /* * justify-content: space-between; */
+    /*? justify-content: space-around; */
+    justify-content: space-evenly; /*? equal equal space distrbut*/
+
+    /*? align-items: center; */
+    /* align-items: flex-end; */
+    /* align-items: stretch; */
+
+    gap: 30px;
+
+    flex-wrap: wrap; 
+    align-content: center;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    font-size: 30px;
+    color: white;
+}
+
+.item-2{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* align-self: center; */
+}
+
+.item-3{
+    /* flex-basis: 200px; */
+}

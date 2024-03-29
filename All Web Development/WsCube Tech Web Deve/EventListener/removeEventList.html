@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Event Listener</title>
+</head>
+<body>
+    <div id="counter" style="font-size: 100px;">Zero</div>
+    <button id="btn">Click Me</button>
+    <button id="stop" onclick="stop()">Stop</button>
+</body>
+<script>
+    var c = 0;
+    document.getElementById("btn").addEventListener("click",counter);
+
+    function counter(){
+        document.getElementById("counter").innerText = c;
+        c++;
+    }
+
+    document.getElementById("btn").addEventListener("mouseenter",colorRed);
+
+    function colorRed(){
+        document.getElementById("counter").style.color="Red";
+    }
+    
+    document.getElementById("btn").addEventListener("mouseleave",colorBlack);
+    function colorBlack() {
+        document.getElementById("counter").style.color="black";
+    }
+
+    function stop(){
+        document.getElementById("btn").removeEventListener("click",counter);
+    }
+</script>
+</html>

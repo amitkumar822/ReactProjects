@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section{
+    width: 80%;
+    height: 600px;
+    /* border: 5px solid black; */
+    text-align: center;
+}
+
+p{
+    column-count: 3;
+    column-rule: 4px dotted red;
+    column-gap: 60px;
+    text-align: justify;
+}

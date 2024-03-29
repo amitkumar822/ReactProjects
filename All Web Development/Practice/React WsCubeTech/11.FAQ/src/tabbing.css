@@ -1,0 +1,29 @@
+.tabsOuter{
+    margin-top: 100px !important;
+    border-top: 4px solid red;
+    width: 1170px;
+    margin: auto;
+}
+
+.tabsOuter ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    gap: 10px;
+    display: flex;
+}
+
+.tabsOuter ul li button {
+    background-color: #e4e4e4e4;
+    border: none;
+    color: #343a40;
+    padding: 0.5rem 20px;
+    margin-right: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.activeButton{
+    background-color: red !important;
+    color: #fff !important;
+}

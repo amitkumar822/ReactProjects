@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: 
+    <i id="main"></i>
+    <br>
+    <button onclick="call()">CallName</button>
+</body>
+<script>
+    function call(){
+        var x = prompt("Enter your name..","");
+        document.getElementById("main").innerHTML = x;
+    }
+</script>
+</html>

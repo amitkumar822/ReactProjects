@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Year</title>
+</head>
+<body>
+    <h1 id="res">
+
+    </h1>
+    <button onclick="getDate()">Date</button>
+    <button onclick="getYear()">Year</button>
+    <button onclick="month()">Month</button>
+    <button onclick="hour()">Hours</button>
+    <button onclick="toDate()">Only Date</button>
+    <button onclick="getDay()">Day</button>
+    <button onclick="getMin()">Minutes</button>
+    <button onclick="getTime()">Time</button>
+    <button onclick="getSec()">Seconds</button>
+</body>
+<script>
+    var date = new Date();
+    function getDate(){
+        document.getElementById("res").innerHTML = date;
+    }
+    function getYear(){
+        document.getElementById("res").innerHTML = date.getFullYear();
+    }
+    function month(){
+        var month = ["January","February","March","April","May","June","July",
+        "August","September","October","November","December"];
+        document.getElementById("res").innerHTML = month[date.getMonth()];
+    }
+    function hour(){
+        document.getElementById("res").innerHTML = date.getHours();
+    }
+    function toDate(){
+        document.getElementById("res").innerHTML = date.getDate();
+    }
+    function getDay(){
+        document.getElementById("res").innerHTML = date.getDay();
+    }
+    function getMin(){
+        document.getElementById("res").innerHTML = date.getMinutes();
+    }
+    function getTime(){
+        document.getElementById("res").innerHTML = date.getTime();
+    }
+    function getSec(){
+        document.getElementById("res").innerHTML = date.getSeconds();
+    }
+</script>
+</html>

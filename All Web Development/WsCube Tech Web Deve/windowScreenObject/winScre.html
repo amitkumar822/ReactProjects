@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="avlHei()">Avail Height</button>
+    <button onclick="Hei()">Height</button>
+    <button onclick="avlWidth()">Avail width</button>
+    <button onclick="width()">Width</button>
+    <button onclick="colDep()">Color Depth</button>
+    <button onclick="scrPixDep()">Screen pixelDepth</button>
+</body>
+<script>
+    function avlHei(){
+        var res = screen.availHeight;
+        alert(res+"px");
+    }
+
+    function Hei(){
+        var res = screen.height;
+        alert(res+"px");
+    }
+
+    function avlWidth(){
+        var res = screen.availWidth;
+        alert(res+"px");
+    }
+
+    function width(){
+        var res = screen.width;
+        alert(res+"px");
+    }
+
+    function colDep(){
+        var res = screen.colorDepth;
+        alert(res+"px");
+    }
+
+    function scrPixDep(){
+        var res = screen.pixelDepth;
+        alert(res+"px");
+    }
+</script>
+</html>

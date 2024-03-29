@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper App</title>
+    <style>
+        *{
+            font-size: 30px;
+            box-shadow: none;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        .wicket{
+            color: red;
+        }
+        .dot{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="root" style="text-align: center;"></div>
+</body>
+<script type="text/babel">
+    let score = 0;
+    let wicket = 0;
+    let ballWiseRes = [];
+    let hit = 0;
+    let inputRef = React.createRef();
+
+    function addScore(num){
+        hit = num;
+        rootElement.render(<App/>);
+    }
+    
+    function addWicket(){
+        hit = "w"
+        rootElement.render(<App/>);
+    }
+
+    const ScoreButtons = () =>{
+        return(
+            <div>
+                <button onClick={() =>addScore(0)}>0</button>
+                <button onClick={() =>addScore(1)}>1</button>
+                <button onClick={() =>addScore(2)}>2</button>
+                <button onClick={() =>addScore(3)}>3</button>
+                <button onClick={() =>addScore(4)}>4</button>
+                <button onClick={() =>addScore(5)}>5</button>
+                <button onClick={() =>addScore(6)}>6</button>
+                <button onClick={() =>addScore(7)}>7</button>
+                <button onClick={() =>addScore(8)}>8</button>
+                <button onClick={() =>addScore(9)}>9</button>
+                <button onClick={addWicket}>wicket</button>
+            </div>
+        );
+    }
+
+    const Result = () =>(
+        <div>
+            {
+                ballWiseRes.map((res,index)=>(
+                    <>
+                    {index%6==0? <br/> : null}
+                    <span key={index}>{res===0 ? <strong className="dot">.</strong> : <>{
+                        res==="w" ? <samp className="wicket">{res}</samp> : res
+                        }</>}</span>
+                    &nbsp;&nbsp;&nbsp;
+                    </>
+                ))
+            }
+        </div>
+    );
+
+    function handleSubmit(event){
+        if(hit=="w"){
+            if(wicket<10){
+                wicket +=1;
+            }
+        }else{
+            if(wicket<10){
+                score += hit;
+            }
+        }
+        
+        event.preventDefault(); //form submit hone pe page refrease ko rokta hai
+        if(wicket<10){
+            ballWiseRes.unshift(
+                //<span>{hit}{","}{inputRef.current.value}</span>
+                <span>{`${hit}, ${inputRef.current.value}`}</span>
+            ); //unshift value ko starting me add or push karta hai
+        }
+
+        hit=0;
+        inputRef.current.value="";
+        rootElement.render(<App/>);
+    }
+
+    const Form = () =>(
+        <form onSubmit={handleSubmit}>
+            <input value={hit}/>
+            <input ref={inputRef} placeholder="Add a comment"/>
+            <button>Submit</button>
+        </form>
+    )
+
+    const App = () =>(
+        <>
+            <h1>SCORE KEEPER</h1>
+            <h2>SCORW {score}/{wicket}</h2>
+            <ScoreButtons />
+            <br/>
+            <Form/>
+            <hr/>
+            {
+                ballWiseRes.map((res,index)=>(
+                    <p key={index}>{res}</p>
+                ))
+            }
+        </>
+    );
+
+    const rootElement = ReactDOM.createRoot(document.getElementById('root'));
+    rootElement.render(<App/>);
+</script>
+
+
+
+<!-- React CDN Link -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- BABEL CDN Link -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</html>

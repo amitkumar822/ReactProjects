@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Operation in React</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    function App(){
+        let loggedIn = false;
+        return(
+            <>
+                <h1>Hello {loggedIn ? "Alexa" : "User"}!</h1>
+                {loggedIn && <p>Welcome to the portal</p>}
+                {loggedIn || <p>Welcome to the India</p>}
+            </>
+        );
+    };
+
+    function Apps(){
+        let loggedIn = true;
+        let name = "Alexa";
+        /*let lastName = "Kumar"*/
+        let lastName = ""
+        return(
+            <>
+                <h1>Hello {loggedIn ? lastName || name: "User"}!</h1>
+                {loggedIn && <p>Welcome to the portal</p>}
+                <App/>
+            </>
+        );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<Apps />)
+</script>
+
+
+<!-- React CDN Link -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- BABEL CDN Link -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res" style="font-size: 100px;">start</h1>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">Stop</button>
+</body>
+<script>
+    var set;
+    function start(){
+        var c = 0;
+        set = setInterval(st,1000);
+        function st(){
+            document.getElementById("res").innerHTML = c;
+            c++;
+        }
+    }
+    function stop(){
+        clearInterval(set);
+    }
+</script>
+</html>

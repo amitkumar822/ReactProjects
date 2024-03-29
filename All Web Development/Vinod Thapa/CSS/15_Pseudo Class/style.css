@@ -1,0 +1,32 @@
+.container{
+    font-size: 30px;
+    font-weight: 550;
+}
+
+/* .container li:first-child{
+    color: rgb(230, 114, 114);
+} */
+
+/* .container ul li:last-of-type{
+    color: #0000ff;
+} */
+
+/* .container li:first-of-type{
+    color: #008000;
+} */
+
+.container li:last-of-type{
+    color: #fc3dcc;
+}
+
+.container ul p:nth-of-type(2){
+    color: #be4c65
+}
+
+.container ul li:nth-child(even){
+    color: yellow;
+}
+
+.container ul li:nth-child(odd){
+    color: darkblue;
+}

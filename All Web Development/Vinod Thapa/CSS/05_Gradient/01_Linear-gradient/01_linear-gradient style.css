@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+div{
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(red,yellow) */
+    /* background-image: linear-gradient(to left,red,yellow) */
+    /* background-image: linear-gradient(to right,red,yellow) */
+    /* background-image: linear-gradient(to top,red,yellow) */
+    /* background-image: linear-gradient(to bottom,red,yellow) */
+    /* background-image: linear-gradient( 90deg,red,yellow) */
+    /* background-image: linear-gradient( 170deg,red,yellow) */
+    /* background-image: linear-gradient(to bottom right,red,yellow) */
+    /* background-image: linear-gradient(to top left,red,yellow) */
+
+
+     /* =================================== */
+    /* transparent linear-gradient */
+    /* background-color: blue; */
+    /* background-image: linear-gradient(
+        to right,
+        rgba(255,0,0,0.5),
+        rgba(126,142,0,1)
+    ); */
+
+    background-image: linear-gradient(
+        to right top,
+        #051937,
+        #004d7a,
+        #008793,
+        #00bf72,
+        #a8eb12
+    );
+}

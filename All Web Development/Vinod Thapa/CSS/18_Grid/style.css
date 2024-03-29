@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c3639;
+}
+
+.grid-container{
+    width: 80%;
+    margin: 100px auto;
+    background-color: #dcd7c9;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.13) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px  13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+    /*! grid starts here */
+
+    display: grid;
+    /* grid-template-rows: 250px 250px; */
+    grid-template-rows: repeat(2, 250px);
+    /* grid-template-columns: 250px 250px 250px; */
+    /*? grid-template-columns: 250px 250px 1fr; */
+    /** grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+
+
+    /*! gaps */
+
+    /* grid-row-gap: 50px; */
+    /* grid-column-gap: 50px; */
+    /* grid-gap: 50px; */
+    /*? row-gap: 50px;
+    column-gap: 50px; */
+
+    gap: 50px;
+}
+
+.item{
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/*! wb can change the position easily */
+
+.item-1 {
+    background-color: yellow;
+
+    /* grid-row-start: 2;
+    grid-row-end: 3; */
+
+    /** grid-row: 2/3; */
+
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+
+    /** grid-column: 2/3; */
+
+    /*? all grid col row sortcut */
+    /* grid-area: 2 / 2 / 3 / 3; */
+
+    /*! 7h:48m video this topic vinod thapa css */
+}
+
+.item-2 {
+    background-color: blue;
+}
+.item-3 {
+    background-color: brown;
+}
+.item-4 {
+    background-color: green;
+}
+.item-5 {
+    background-color: #ed0b80bf;
+}
+.item-6 {
+    background-color: #85586f   ;
+}

@@ -1,0 +1,25 @@
+/* ================Main Box============ */
+@media (max-width: 830px){
+    .nav_bar{
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main_box{
+        display: grid;
+        grid-column: 1;
+        justify-content: center;
+    }
+
+    .toggleMenu{
+        font-size: 30px;
+        margin-right: 20px;
+        margin-top: 30px;
+        display: block;
+    }
+}

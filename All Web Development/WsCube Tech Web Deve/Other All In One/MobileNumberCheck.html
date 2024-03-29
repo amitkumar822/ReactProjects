@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Check</title>
+</head>
+<body>
+    Enter Your Number.. <br>
+    <input type="text" onkeyup="val(this)">
+    <div id="res"></div>
+</body>
+<script>
+    document.getElementById("res").style.color = "red";
+    function val(elem){
+        if(isNaN(elem.value)){
+            document.getElementById("res").innerHTML="Please enter only number.";
+        }else{
+            document.getElementById("res").innerHTML="";
+            if(elem.value.length > 10){
+                document.getElementById("res").innerHTML="Please enter only ten digits.";
+            }
+        }
+    }
+</script>
+</html>

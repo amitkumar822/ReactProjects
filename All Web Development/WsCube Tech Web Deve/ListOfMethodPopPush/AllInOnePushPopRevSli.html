@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="pop()">POP</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="reverse()">REVERSE</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="slice()">SLICE</button>
+</body>
+<script>
+    var fruits = ["Mango","Apple","Pineapple","Banana"];
+    var demo = fruits;
+    document.getElementById("res").innerHTML = demo;
+    function pop(){
+        demo.pop();
+        document.getElementById("res").innerHTML=demo;
+    }
+    function push(){
+        var x = prompt("Enter Fruit Name..","");
+        demo.push(x);
+        document.getElementById("res").innerHTML=demo;
+    }
+    function reverse(){
+        demo.reverse();
+        document.getElementById("res").innerHTML=demo;
+    }
+    function shift(){
+        demo.shift();
+        document.getElementById("res").innerHTML=demo;
+    }
+    function slice(){
+        var x = demo.slice(1);
+        document.getElementById("res").innerHTML=x;
+    }
+</script>
+</html>

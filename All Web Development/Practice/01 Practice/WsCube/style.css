@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* body{
+    
+} */
+.topContainerBox{
+    height: 500px;
+    background-image: url('https://w0.peakpx.com/wallpaper/265/362/HD-wallpaper-study-on-bed-bed-book-tea-pen-learn.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    height: 70px;
+    /* position: fixed; */
+    background-color: #a0e3f6;
+    /* display: flex;
+    justify-content: space-between;
+    position: relative; */
+}
+
+header nav ul{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.02rem;
+
+}

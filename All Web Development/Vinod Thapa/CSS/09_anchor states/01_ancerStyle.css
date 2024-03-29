@@ -1,0 +1,25 @@
+a:link{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    font-weight: 550;
+    font-style: oblique;
+    border-radius: 15px;
+}
+
+a:visited{
+    background-color: aqua;
+    color: black;
+}
+
+a:hover{
+    background-color: red;
+    /* color: black; */
+}
+
+a:active{
+    background-color: yellow;
+    /* color: red; */
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="first" placeholder="Enter First Nmae"><br><br>
+    <input type="text" id="second" placeholder="Enter Second Name">
+    <button onclick="add()">Addition</button>
+    <br>
+    <div class="res">
+
+    </div>
+</body>
+<script>
+    function add(){
+        var first = document.getElementById("first").value;
+        var last = document.getElementById("second").value;
+        var result = first+" "+last;
+        document.getElementsByClassName("res")[0].innerHTML = result;
+    }
+</script>
+</html>

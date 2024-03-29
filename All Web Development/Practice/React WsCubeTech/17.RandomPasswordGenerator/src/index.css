@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(43, 43, 72); */
+    background-image: linear-gradient(to right top, #f9c883, #ffbb8b, #ffb098, #ffa7a8, #ffa2b9, #ffa3b7, #ffa3b6, #ffa4b4, #ffae9d, #ffc282, #ffdd6d, #ecfb6d);
+}
+
+.passwordBox {
+    width: 450px;
+    /* height: 300px; */
+    padding: 20px;
+    /* background-color: rgb(169, 88, 245); */
+    background: linear-gradient(
+        rgb(251, 251, 117),
+        rgb(249, 81, 81),
+        rgb(251, 132, 253),
+        rgb(255, 255, 255),
+        rgb(176, 234, 105)
+    );
+    border-radius: 10px;
+}
+.passwordBox h2 {
+    font-size: 40px;
+}
+
+.CopyBtn{
+    font-size: 20px;
+    background-color: rgb(91, 252, 58);
+    cursor: pointer;
+}
+.CopyBtn:hover{
+    background-color: rgb(58, 252, 145);
+}
+
+.pasInLen {
+    font-size: 20px;
+    padding: 3px 0px 3px 7px !important;
+}
+
+.passwordBoxIn {
+    display: flex;
+}
+.passwordBoxIn input {
+    flex-basis: 80%;
+    padding-left: 5px;
+}
+
+.passwordBoxIn button {
+    flex-basis: 20%;
+    padding: 10px 0px;
+}
+
+.passLength {
+    padding:  10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.passLength label {
+    font-size: 30px;
+    color: black;
+}
+
+.passLength input {
+    padding:  10px 0px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0px;
+    cursor: pointer;
+    font-size: 30px;
+}

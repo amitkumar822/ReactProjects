@@ -1,0 +1,26 @@
+/*? Descendant Selector (Space): Selects an element that is a descendant of another element. */
+
+.content-1 ul{
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+/* Child Selector (>): Selects an element that is a direct child of another element. */
+
+ul > p{
+    color: blue;
+}
+
+/*? Adjacent Sibling Selector (+) : Selects an element that is immediately preceded by another element.*/
+ul + li{
+    color: red;
+}
+
+/* General Sibling Selector (~) : Selects all elements that are siblings of another element and share the same parent. */
+
+p ~ li{
+    color: rgb(132, 2, 132);
+}
+
+/*? Universal Selector (*): Selects all elements. */

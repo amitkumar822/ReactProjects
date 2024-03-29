@@ -1,0 +1,54 @@
+/*! ToDoList Style  */
+
+.container{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  margin-top: 60px;
+}
+
+form{
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+form input{
+  height: 40px;
+  flex-basis: 80%;
+}
+form button{
+  flex-basis: 20%;
+}
+.toDoOuterDiv {
+  width: 1170px;
+  margin: auto;
+}
+.toDoOuterDiv ul {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 50px;
+  list-style: none;
+}
+.toDoOuterDiv ul li {
+  color: #fff;background-color: black;
+  padding: 10px;
+  text-align: left;
+  position: relative;
+  font-size: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.toDoOuterDiv ul li span {
+  right: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
+.completToDo{
+  text-decoration: line-through;
+  color: red !important;
+  background-color: yellow !important;
+}

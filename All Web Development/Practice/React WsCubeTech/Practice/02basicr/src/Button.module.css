@@ -1,0 +1,17 @@
+.btn{
+    padding: 4px;
+    font-size: 10px;
+}
+
+.bg_denger{
+    background-color: red;
+    color: white;
+    margin-left: 5px;
+}
+
+.bg_prime{
+    background-color: yellow;
+}
+.warningss{
+    background-color: yellow;
+}

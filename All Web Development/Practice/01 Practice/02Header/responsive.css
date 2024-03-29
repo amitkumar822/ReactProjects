@@ -1,0 +1,106 @@
+/*? Responsive */
+/*! header Section */
+
+@media (max-width: 1455px){
+    .logo{
+        margin-right: 0.2rem;
+    }
+    .logo img{
+        margin-top: 10px;
+        height: 65px;
+    }
+
+    header nav span{
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1256px){
+    
+    .logo img{
+        margin-top: 10px;
+        height: 50px;
+        margin-left: 1.2%;
+    }
+    
+    header nav {
+        width: 400px;
+        margin-left: 1.6%;
+        /* background-color: aqua; */
+    }
+    
+    header nav span{
+        font-size: 0.9rem;
+    }
+    
+    .search_bar{
+        width: 250px;
+        margin-left: 3%;
+    }
+    
+    .search_bar input{
+        padding: 0.6rem 2rem;
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .search_bar .search_icon{
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .about_section{
+        width: 150px;
+        margin-right: 0.7%;
+        font-weight: 800;
+        gap: 2%;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 958px){
+    .logo img{
+        margin-top: 18px;
+        height: 38px;
+    }
+
+    header nav {
+        min-width: 200px;
+        width: 20%;
+        /* background-color: azure; */
+    }
+    header nav span{
+        font-size: 0.55rem;
+        padding-left: 1%;
+        margin-left: 12px;
+    }
+
+    .search_bar{
+        min-width: 160px;
+        /* background-color: gray; */
+    }
+    
+    .search_bar input{
+        padding: 0.6rem 3rem;
+        padding-left: 0.5rem;
+        font-size: 0.5rem;
+    }
+    
+    .search_bar .search_icon{
+        width: 25px;
+        font-size: 0.6rem;
+        /* position: absolute; */
+        margin-left: 2px;
+        padding: 0.5rem;
+        justify-content: flex-end;
+    }
+
+    .about_section{
+        width: 100px;
+        /* background-color: azure; */
+    }
+    .about_innerBox{
+        font-size: 9.2px;
+    }
+}

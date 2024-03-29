@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+  <!-- <script>
+      module.exports = {
+          theme: {
+              extend: {
+                  minWidth: {
+                      'w-800': '55rem',
+                    }
+                }
+            }
+        }
+    </script> -->
+    </head>
+    <body class="bg-slate-800">
+    <header class="h-20 bg-lime-500 flex justify-between">
+        <div class="h-16 scroll-ml-10">
+            <img  class="h-16" src="../02Header/logo.png" alt="logo">
+        </div>
+        <nav class="flex py-7">
+            <span class="px-2">Home</span>
+            <span class="px-2">About</span>
+            <span class="px-2">Gallery</span>
+            <span class="px-2">Contact</span>
+            <span class="px-2">Services</span>
+            <span class="px-2">Company</span>
+        </nav>
+        <div class="flex justify-center items-center">
+            <div class=" rounded-[10px] bg-red-500">
+                <input type="text" placeholder="Search our product..">
+                <i class="fa-solid fa-magnifying-glass search_icon"></i>
+            </div>
+        </div>
+        <div class="flex min-w-[200px] justify-center items-center">
+            <div class="px-2">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </div>
+            <div class="px-2">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span>Login</span>
+            </div>
+            <div class="px-2">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Get Help</span>
+            </div>
+        </div>
+
+        <div class="menu_bar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+</body>
+</html>

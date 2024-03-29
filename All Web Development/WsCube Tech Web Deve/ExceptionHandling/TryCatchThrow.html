@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Please enter a number between 5 to 9:<br>
+    <input type="text" id="num"> <br>
+    <button onclick="test()">Click Me</button>
+    <h1 id="res"></h1>
+</body>
+<script>
+    var num = document.getElementById("num");
+    function test(){
+        var data = num.value;
+        try{
+            if(isNaN(data)){
+                throw "This is not number";
+            }else{
+                if(data <5 || data>9){
+                    throw "Number is out of range";
+                }else{
+                    throw "Right number enter Good!";
+                }
+            }
+        }catch(errMess){
+            document.getElementById("res").innerHTML = errMess;
+        }
+    }
+</script>
+</html>

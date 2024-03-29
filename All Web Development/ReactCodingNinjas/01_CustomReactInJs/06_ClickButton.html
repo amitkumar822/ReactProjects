@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All in One</title>
+
+    <style>
+        table{
+            border: 2px double brown;
+            border-radius: 10px;
+            border-collapse: collapse;
+            font-size: 40px;
+            text-align: center;
+        }
+        
+        th{
+            padding: 20px;
+            border: 0px;
+            border-bottom: 1px;
+            border-right: 1px;
+            border-style: solid;
+            background-color: aliceblue;
+        }
+
+        td{
+            padding: 20px;
+            border: 0px;
+            border-bottom: 1px;
+            border-right: 1px;
+            border-style: solid;
+        }
+
+        h1{
+            color: blue;
+            font-size: 50px;
+        }
+
+        img{
+            width: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+
+    /*=================
+     Cars Details 
+    ===================*/
+
+    function CarsDetails(){
+        const cars = [
+            {
+                name: "Tata",
+                price: "27 lakh",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U109S_Xta39u9bJo_Ozjpv64UnbBVh6B1w&usqp=CAU"
+            },
+            {
+                name: "Mahindra",
+                price: "25 lakh",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U109S_Xta39u9bJo_Ozjpv64UnbBVh6B1w&usqp=CAU"
+            },
+            {
+                name: "Tata",
+                price: "27 lakh",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U109S_Xta39u9bJo_Ozjpv64UnbBVh6B1w&usqp=CAU"
+            },
+            {
+                name: "Hero",
+                price: "20 lakh",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5U109S_Xta39u9bJo_Ozjpv64UnbBVh6B1w&usqp=CAU"
+            }
+        ];
+
+        return(
+            <>
+                <h1>Cars Details</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Average Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            cars.map((car,index)=>(
+                                <tr key={index}>
+                                    <td><img src={car.img} alt="img"/></td>
+                                    <td>{car.name}</td>
+                                    <td>{car.price}</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </>
+        );
+    };
+
+
+    /*=================
+     Student Details 
+    ===================*/
+
+    function StudentDetail(){
+        const students = [
+            {
+                name: "Amit Kumar",
+                course: "JavaScript",
+                branch: "MCA"
+            },
+            {
+                name: "Rahul Kumar",
+                course: "Maths",
+                branch: "Bsc"
+            },
+            {
+                name: "Deeju Kumar",
+                course: "Java",
+                branch: "MCA"
+            }
+        ];
+
+        return(
+            <>
+                <h1>Student Details</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>course</th>
+                            <th>Branch</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            students.map((student,index)=>(
+                                <tr key={index}>
+                                    <td>{student.name}</td>
+                                    <td>{student.course}</td>
+                                    <td>{student.branch}</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </>
+        );
+    }
+
+    
+    /*=================
+     Conditional Opration 
+    ===================*/
+
+    function Conditional(){
+        let loggedIn = true
+        return(
+            <>
+                <h1>Hello {loggedIn ? "Alexa" : "User"}!</h1>
+                {loggedIn && <p>Welcome to the portal</p>}
+                {loggedIn || <p>Welcome to the portal2</p>}
+            </>
+        );
+    }
+
+    function App(){
+        return (
+            <>
+            <CarsDetails />
+            <StudentDetail />
+            <Conditional />
+            </>
+            )
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+<!-- React CDN Link -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- BABEL CDN Link -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</html>

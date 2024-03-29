@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <!-- React CDN Link -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- BABEL CDN Link -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    function App() {
+        const Students = [
+            {
+                name: "Amit",
+                age: 24,
+                branch: "MCA"
+            },
+            {
+                name: "Deeju",
+                age: 25,
+                branch: "MCA"
+            },
+            {
+                name: "Sudhir",
+                age: 27,
+                branch: "Bsc"
+            },
+            {
+                name: "Rahul",
+                age: 23,
+                branch: "Maths"
+            }
+        ];
+
+        return(
+            <>
+                <h1>Students Details</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>AGE</th>
+                            <th>BRANCH</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            Students.map((student,index)=>(
+                                <tr key={index}>
+                                    <td>{student.name}</td>
+                                    <td>{student.age}</td>
+                                    <td>{student.branch}</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </>
+        );
+    };
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</html>

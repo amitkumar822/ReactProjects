@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <div id="count" style="font-size: 100px;">0</div>
+    <button id="btn">Click Me</button>
+</body>
+
+<script>
+    var c = 0;
+    document.getElementById("btn").addEventListener("click",function(){
+        document.getElementById("count").innerHTML = c;
+        c++;
+    });
+
+    document.getElementById("btn").addEventListener("mouseenter",function(){
+        document.getElementById("count").style.color="red";
+        c++;
+    });
+
+    document.getElementById("btn").addEventListener("mouseleave",function(){
+        document.getElementById("count").style.color="black";
+        c++;
+    });
+
+</script>
+</html>
