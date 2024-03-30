@@ -6,12 +6,13 @@ import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} fr
 import Layout from './Layout'
 import {Home, About, Contact} from './components/ExportAll.jsx'
 import User from './components/User/User.jsx'
+
 import Github, { githubInfoLoder } from './components/Github/Github.jsx'
 // import Home from './components/Home/Home.jsx'
 // import About from './components/About/About.jsx'
 // import Contact from './components/Contact/Contact.jsx'
 
-
+// import Github from './components/Github/Github.jsx'
 
 // const router = createBrowserRouter([
 //   {
@@ -43,8 +44,8 @@ const router = createBrowserRouter(
       <Route path='user/:userid' element={<User/>} />
       <Route 
       loader={githubInfoLoder}
-      path='github' 
-      element={<Github/>} 
+      path='github'
+      element={<Github/>}
       />
     </Route>
   )
