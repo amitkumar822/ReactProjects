@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import pdf from '../pdf/AMIT KUMAR.pdf'
 import hero from './Data/hero.json'
 import Typed from 'typed.js'
-import images from '../photos/img.jpg'
+import images from '../photos/Amit.jpg'
 
 function Home() {
 
@@ -42,8 +42,8 @@ function Home() {
           data-aos="fade-up-left"
           data-aos-duration="1000"
           >
-            {/* <img src={images} alt="hero" /> */}
-            <img src={`/assets/${hero.imgSrc}`} alt="hero" />
+            <img src={images} alt="hero" />
+            {/* <img src={`/assets/${hero.imgSrc}`} alt="hero" /> */}
           </div>
         </div>
       </div>
