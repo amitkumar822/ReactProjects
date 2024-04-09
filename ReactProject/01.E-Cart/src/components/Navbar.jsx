@@ -32,7 +32,7 @@ function Navbar({ setData, cart }) {
       <header className=" sticky-top">
         <div className="nav-bar">
           <Link to={"/"} className="brand">
-            Shopping
+            AK Shopping
           </Link>
 
           <form onSubmit={handleSubmit} className="search-bar">
